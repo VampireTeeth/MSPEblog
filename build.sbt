@@ -1,7 +1,12 @@
+import play.Project._
+
 name := """MSPEblog"""
 
-version := "1.0"
+version := "1.0-SNAPSHOT"
 
-scalaVersion := "2.10.2"
+libraryDependencies ++= Seq(
+  "org.webjars" %% "webjars-play" % "2.2.0", 
+  "org.webjars" % "bootstrap" % "2.3.1"
+)
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "1.9.1" % "test"
+playScalaSettings
