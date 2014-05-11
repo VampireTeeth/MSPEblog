@@ -1,0 +1,19 @@
+@(message: String)
+
+@main("User login") {
+
+    <div class="well">
+        <form action="/user" method="post" accept-charset="utf-8">
+            <div id="inputs" class="inputs-div">
+            <label for="username">Username</label>
+            <input type="text" name="username" value="" id="username"/>
+            <label for="password">Password</label>
+            <input type="text/submit/hidden/button" name="password" value="" id="password"/>
+            </div>
+            <div id="submit" class="submit-div">
+            <input type="submit" value="Login"/>
+            </div>
+        </form>
+    </div>
+
+}
