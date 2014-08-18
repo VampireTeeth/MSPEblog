@@ -1,4 +1,4 @@
-name := """MSPEblog.local"""
+name := """MSPEblog"""
 
 version := "1.0-SNAPSHOT"
 
