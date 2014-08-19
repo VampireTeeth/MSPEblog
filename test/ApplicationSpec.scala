@@ -26,5 +26,17 @@ class ApplicationSpec extends Specification {
       contentType(home) must beSome.which(_ == "text/html")
       contentAsString(home) must contain ("Your new application is ready.")
     }
+
+    "log info message" in new WithApplication{
+      val page = route(FakeRequest(GET, "/logging")).get
+
+      status(page) must equalTo(OK)
+    }
+
+    "another log info message" in new WithApplication{
+      val page = route(FakeRequest(GET, "/another/logging")).get
+
+      status(page) must equalTo(OK)
+    }
   }
 }

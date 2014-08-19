@@ -1,7 +1,14 @@
 @(message: String)
+@import tags._
 
-@main("Welcome to Play") {
+@main(title = "Welcome to Play") {
+    <h1>Sidebar</h1>
+} {
+    <h1>@message</h1>
 
-    @play20.welcome(message)
-
+    @for(l <- Seq("success", "warning", "error")) {
+      @notice(level = l) { color => 
+        <span style="color: @color">Somthing is happened</span>
+      }
+    }
 }
