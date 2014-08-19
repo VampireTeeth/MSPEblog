@@ -2,4 +2,4 @@ target
 .idea
 .ctags
 logs
-tags
+./tags
