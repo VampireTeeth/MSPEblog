@@ -1,0 +1,14 @@
+@(userForm: Form[UserData])
+
+@import helper._
+
+@main(title="User form") {
+  <h1>Sidebar</h1>
+} {
+  @form(action=routes.Application.userPost()) {
+    @inputText(userForm("name"))
+    @inputText(userForm("age"))
+    <input type="submit" value="Submit">
+  }
+}
+

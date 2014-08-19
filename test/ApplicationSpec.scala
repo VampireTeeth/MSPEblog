@@ -38,5 +38,10 @@ class ApplicationSpec extends Specification {
 
       status(page) must equalTo(OK)
     }
+    
+    "render user form page" in new WithApplication{
+      val page = route(FakeRequest(GET, "/user")).get
+      status(page) must equalTo(OK)
+    }
   }
 }
